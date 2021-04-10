@@ -14,8 +14,10 @@ endif ()
 find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cc)
+add_executable(dictionary2 main2.cc)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui Qt5::Widgets)
+target_link_libraries(dictionary2 Qt5::Core Qt5::Gui Qt5::Widgets)
 
 if (WIN32)
     set(DEBUG_SUFFIX)
